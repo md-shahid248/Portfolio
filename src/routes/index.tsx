@@ -229,25 +229,22 @@ function Portfolio() {
 
       {/* HERO */}
       <section id="home" className="px-6 pb-20 pt-16 md:px-12 md:pb-28 md:pt-24">
-        <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-12">
-          <div className="reveal md:col-span-7">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 md:grid-cols-2 md:gap-16">
+          <div className="reveal">
             <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
               Introduction
             </p>
-            <h1 className="mt-4 text-4xl font-semibold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
-              Hi, I'm Shahid —{" "}
-              <span className="text-muted-foreground">
-                a{" "}
-                <Typewriter
-                  className="text-primary"
-                  words={[
-                    "Full-Stack Developer",
-                    "Cloud Enthusiast",
-                    "AI & ML Learner",
-                    "Software Engineer",
-                  ]}
-                />
-              </span>
+            <h1 className="mt-6 text-4xl font-semibold leading-[1.05] tracking-tight md:text-5xl lg:text-6xl">
+              Hey there! I'm Shahid, a{" "}
+              <Typewriter
+                className="text-primary"
+                words={[
+                  "Full-Stack Developer",
+                  "Cloud Enthusiast",
+                  "AI & ML Learner",
+                  "Software Engineer",
+                ]}
+              />
             </h1>
             <p className="mt-6 max-w-xl text-base text-muted-foreground md:text-lg">
               Passionate about building intelligent applications, scalable web solutions and
@@ -275,8 +272,8 @@ function Portfolio() {
             </div>
           </div>
 
-          <div className="md:col-span-5">
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl border border-border bg-card">
+          <div className="reveal">
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-border bg-card">
               <img
                 src={portrait}
                 alt="Mohammed Shahid R"
@@ -296,11 +293,6 @@ function Portfolio() {
                 </div>
               </div>
             </div>
-            <ul className="mt-6 space-y-1.5 text-sm text-muted-foreground">
-              <li className="text-foreground">→ Introduction</li>
-              <li>Curiosity</li>
-              <li>Craft</li>
-            </ul>
           </div>
         </div>
       </section>
