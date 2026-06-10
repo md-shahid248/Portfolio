@@ -84,13 +84,13 @@ function Section({
 }) {
   return (
     <section id={id} className="border-t border-border px-6 py-20 md:px-12 md:py-28">
-      <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-12">
-        <div className="md:col-span-4">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-12">
           <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">{eyebrow}</p>
           <h2 className="mt-3 text-2xl font-semibold tracking-tight md:text-3xl">{title}</h2>
           {side && <p className="mt-3 text-sm text-muted-foreground">{side}</p>}
         </div>
-        <div className="md:col-span-8">{children}</div>
+        <div>{children}</div>
       </div>
     </section>
   );
