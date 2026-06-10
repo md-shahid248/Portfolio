@@ -16,6 +16,7 @@ import projectFind from "@/assets/project-finditcampus.jpg";
 import projectMarine from "@/assets/project-marine.jpg";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Typewriter } from "@/components/typewriter";
+import { SideQuest } from "@/components/side-quest/side-quest";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -450,6 +451,11 @@ function Portfolio() {
             </a>
           ))}
         </div>
+      </Section>
+
+      {/* SIDE QUEST */}
+      <Section id="side-quest" eyebrow="Side Quest" title="For You" side="A little easter egg — take a quick break and play.">
+        <SideQuest />
       </Section>
 
       {/* CONTACT */}
