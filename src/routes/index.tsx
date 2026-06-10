@@ -369,7 +369,7 @@ function Portfolio() {
 
       {/* SKILLS */}
       <Section id="skills" eyebrow="Skills" title="Skills">
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {skills.map((cat) => (
             <div
               key={cat.category}
@@ -378,13 +378,16 @@ function Portfolio() {
               <h3 className="text-sm font-semibold uppercase tracking-[0.14em] text-muted-foreground">
                 {cat.category}
               </h3>
-              <ul className="mt-5 space-y-3">
+              <div className="mt-5 flex flex-wrap gap-2">
                 {cat.items.map((s) => (
-                  <li key={s.name} className="text-sm text-foreground">
-                    {s.name}
-                  </li>
+                  <span
+                    key={s}
+                    className="rounded-full border border-border bg-background/50 px-3 py-1.5 text-xs text-foreground transition-colors hover:border-primary/40 hover:bg-primary/10"
+                  >
+                    {s}
+                  </span>
                 ))}
-              </ul>
+              </div>
             </div>
           ))}
         </div>
