@@ -475,7 +475,7 @@ function Portfolio() {
 
       {/* CONTACT */}
       <Section id="contact" eyebrow="Contact" title="Let's connect" side="Open to roles, collabs and conversations.">
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-8">
           <form
             onSubmit={(e) => {
               e.preventDefault();
@@ -524,44 +524,6 @@ function Portfolio() {
             </button>
           </form>
 
-          <div className="space-y-3">
-            <a
-              href="mailto:mohammedshahid2408@gmail.com"
-              className="flex items-center justify-between rounded-2xl border border-border bg-card px-5 py-4 transition-colors hover:border-primary/40"
-            >
-              <span className="flex items-center gap-3 text-sm">
-                <Mail className="h-4 w-4 text-primary" /> mohammedshahid2408@gmail.com
-              </span>
-              <ArrowUpRight className="h-4 w-4 text-muted-foreground" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/mdshahid-r/"
-              target="_blank"
-              rel="noreferrer"
-              className="flex items-center justify-between rounded-2xl border border-border bg-card px-5 py-4 transition-colors hover:border-primary/40"
-            >
-              <span className="flex items-center gap-3 text-sm">
-                <Linkedin className="h-4 w-4 text-primary" /> linkedin.com/in/mdshahid-r
-              </span>
-              <ArrowUpRight className="h-4 w-4 text-muted-foreground" />
-            </a>
-            <a
-              href="https://github.com/md-shahid248"
-              target="_blank"
-              rel="noreferrer"
-              className="flex items-center justify-between rounded-2xl border border-border bg-card px-5 py-4 transition-colors hover:border-primary/40"
-            >
-              <span className="flex items-center gap-3 text-sm">
-                <Github className="h-4 w-4 text-primary" /> github.com/md-shahid248
-              </span>
-              <ArrowUpRight className="h-4 w-4 text-muted-foreground" />
-            </a>
-            <div className="flex items-center justify-between rounded-2xl border border-border bg-card px-5 py-4">
-              <span className="flex items-center gap-3 text-sm">
-                <MapPin className="h-4 w-4 text-primary" /> Bengaluru, Karnataka, India
-              </span>
-            </div>
-          </div>
         </div>
       </Section>
 
