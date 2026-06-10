@@ -103,27 +103,32 @@ function Portfolio() {
   const skills = useMemo(
     () => [
       {
-        category: "Programming",
-        items: [
-          { name: "Python", level: 90 },
-          { name: "Java", level: 82 },
-        ],
+        category: "Programming Languages",
+        items: ["Python", "Java", "C", "JavaScript", "HTML", "CSS"],
       },
       {
-        category: "Web Development",
-        items: [
-          { name: "React.js", level: 90 },
-          { name: "Node.js / Express", level: 85 },
-          { name: "MongoDB", level: 80 },
-          { name: "REST APIs", level: 88 },
-        ],
+        category: "Frameworks & Libraries",
+        items: ["React.js", "Node.js", "Express.js", "Flask", "YOLOv8"],
       },
       {
-        category: "Cloud",
-        items: [
-          { name: "Cloud Computing", level: 78 },
-          { name: "Cloud Deployment", level: 80 },
-        ],
+        category: "AI / ML",
+        items: ["Machine Learning", "Deep Learning (CNNs)", "YOLOv8"],
+      },
+      {
+        category: "Web & APIs",
+        items: ["REST APIs", "JWT Authentication", "Mongoose ODM", "Tailwind CSS", "Context API"],
+      },
+      {
+        category: "Databases",
+        items: ["MongoDB", "MySQL", "SQL", "Power BI", "MS Excel"],
+      },
+      {
+        category: "Tools & Platforms",
+        items: ["Git/GitHub", "VS Code", "LaTeX", "Cloudinary", "Render", "MongoDB Atlas"],
+      },
+      {
+        category: "Specialized Areas",
+        items: ["Cybersecurity", "Data Visualization", "Data Structures & Algorithms (DSA)", "Cloud Computing"],
       },
     ],
     [],
