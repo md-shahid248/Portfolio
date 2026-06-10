@@ -43,7 +43,6 @@ const NAV = [
   { id: "about", label: "About" },
   { id: "education", label: "Education" },
   { id: "skills", label: "Skills" },
-  { id: "services", label: "Services" },
   { id: "projects", label: "Projects" },
   { id: "contact", label: "Contact" },
 ];
@@ -406,34 +405,6 @@ function Portfolio() {
               </span>
             ))}
           </div>
-        </div>
-      </Section>
-
-      {/* SERVICES */}
-      <Section id="services" eyebrow="Services" title="What I offer">
-        <div className="grid gap-6 md:grid-cols-2">
-          {[
-            {
-              title: "Full-Stack Web Development",
-              desc:
-                "Designing and developing scalable, responsive and secure web applications using modern technologies and industry best practices.",
-            },
-            {
-              title: "Cloud Computing Solutions",
-              desc:
-                "Deploying and managing cloud-based applications with scalable infrastructure and modern cloud technologies.",
-            },
-          ].map((s, i) => (
-            <div
-              key={s.title}
-              className="group relative overflow-hidden rounded-2xl border border-border bg-card p-7 transition-all hover:-translate-y-1 hover:border-primary/40"
-            >
-              <p className="text-xs tabular-nums text-muted-foreground">0{i + 1}</p>
-              <h3 className="mt-3 text-xl font-semibold">{s.title}</h3>
-              <p className="mt-3 text-sm text-muted-foreground">{s.desc}</p>
-              <ArrowUpRight className="absolute right-6 top-6 h-5 w-5 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary" />
-            </div>
-          ))}
         </div>
       </Section>
 
