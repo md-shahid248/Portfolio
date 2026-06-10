@@ -103,27 +103,32 @@ function Portfolio() {
   const skills = useMemo(
     () => [
       {
-        category: "Programming",
-        items: [
-          { name: "Python", level: 90 },
-          { name: "Java", level: 82 },
-        ],
+        category: "Programming Languages",
+        items: ["Python", "Java", "C", "JavaScript", "HTML", "CSS"],
       },
       {
-        category: "Web Development",
-        items: [
-          { name: "React.js", level: 90 },
-          { name: "Node.js / Express", level: 85 },
-          { name: "MongoDB", level: 80 },
-          { name: "REST APIs", level: 88 },
-        ],
+        category: "Frameworks & Libraries",
+        items: ["React.js", "Node.js", "Express.js", "Flask", "YOLOv8"],
       },
       {
-        category: "Cloud",
-        items: [
-          { name: "Cloud Computing", level: 78 },
-          { name: "Cloud Deployment", level: 80 },
-        ],
+        category: "AI / ML",
+        items: ["Machine Learning", "Deep Learning (CNNs)", "YOLOv8"],
+      },
+      {
+        category: "Web & APIs",
+        items: ["REST APIs", "JWT Authentication", "Mongoose ODM", "Tailwind CSS", "Context API"],
+      },
+      {
+        category: "Databases",
+        items: ["MongoDB", "MySQL", "SQL", "Power BI", "MS Excel"],
+      },
+      {
+        category: "Tools & Platforms",
+        items: ["Git/GitHub", "VS Code", "LaTeX", "Cloudinary", "Render", "MongoDB Atlas"],
+      },
+      {
+        category: "Specialized Areas",
+        items: ["Cybersecurity", "Data Visualization", "Data Structures & Algorithms (DSA)", "Cloud Computing"],
       },
     ],
     [],
@@ -364,7 +369,7 @@ function Portfolio() {
 
       {/* SKILLS */}
       <Section id="skills" eyebrow="Skills" title="Skills">
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {skills.map((cat) => (
             <div
               key={cat.category}
@@ -373,13 +378,16 @@ function Portfolio() {
               <h3 className="text-sm font-semibold uppercase tracking-[0.14em] text-muted-foreground">
                 {cat.category}
               </h3>
-              <ul className="mt-5 space-y-3">
+              <div className="mt-5 flex flex-wrap gap-2">
                 {cat.items.map((s) => (
-                  <li key={s.name} className="text-sm text-foreground">
-                    {s.name}
-                  </li>
+                  <span
+                    key={s}
+                    className="rounded-full border border-border bg-background/50 px-3 py-1.5 text-xs text-foreground transition-colors hover:border-primary/40 hover:bg-primary/10"
+                  >
+                    {s}
+                  </span>
                 ))}
-              </ul>
+              </div>
             </div>
           ))}
         </div>
