@@ -230,7 +230,7 @@ function Portfolio() {
       {/* HERO */}
       <section id="home" className="px-6 pb-20 pt-16 md:px-12 md:pb-28 md:pt-24">
         <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-12">
-          <div className="reveal md:col-span-7">
+          <div className="reveal md:order-2 md:col-span-7">
             <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
               Introduction
             </p>
@@ -275,7 +275,7 @@ function Portfolio() {
             </div>
           </div>
 
-          <div className="md:col-span-5">
+          <div className="md:order-1 md:col-span-5">
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl border border-border bg-card">
               <img
                 src={portrait}
