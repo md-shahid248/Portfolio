@@ -371,7 +371,7 @@ function Portfolio() {
       </Section>
 
       {/* SKILLS */}
-      <Section id="skills" eyebrow="Skills" title="Skills & expertise">
+      <Section id="skills" eyebrow="Skills" title="Skills">
         <div className="grid gap-6 md:grid-cols-3">
           {skills.map((cat) => (
             <div
