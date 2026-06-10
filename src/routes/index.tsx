@@ -235,7 +235,7 @@ function Portfolio() {
               Introduction
             </p>
             <h1 className="mt-4 text-4xl font-semibold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
-              Hi, I'm Mohammed Shahid R —{" "}
+              Hi, I'm Shahid —{" "}
               <span className="text-muted-foreground">
                 a{" "}
                 <Typewriter
@@ -371,7 +371,7 @@ function Portfolio() {
       </Section>
 
       {/* SKILLS */}
-      <Section id="skills" eyebrow="Skills" title="Skills & expertise">
+      <Section id="skills" eyebrow="Skills" title="Skills">
         <div className="grid gap-6 md:grid-cols-3">
           {skills.map((cat) => (
             <div
@@ -381,21 +381,10 @@ function Portfolio() {
               <h3 className="text-sm font-semibold uppercase tracking-[0.14em] text-muted-foreground">
                 {cat.category}
               </h3>
-              <ul className="mt-5 space-y-4">
+              <ul className="mt-5 space-y-3">
                 {cat.items.map((s) => (
-                  <li key={s.name}>
-                    <div className="flex items-baseline justify-between text-sm">
-                      <span>{s.name}</span>
-                      <span className="text-xs tabular-nums text-muted-foreground">
-                        {s.level}%
-                      </span>
-                    </div>
-                    <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-muted">
-                      <div
-                        className="h-full rounded-full bg-gradient-to-r from-primary to-secondary transition-[width] duration-700"
-                        style={{ width: `${s.level}%` }}
-                      />
-                    </div>
+                  <li key={s.name} className="text-sm text-foreground">
+                    {s.name}
                   </li>
                 ))}
               </ul>
