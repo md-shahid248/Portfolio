@@ -460,56 +460,64 @@ function Portfolio() {
 
       {/* CONTACT */}
       <Section id="contact" eyebrow="Contact" title="Let's connect" side="Open to roles, collabs and conversations.">
-        <div className="mx-auto w-full max-w-xl">
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              const data = new FormData(e.currentTarget);
-              const subject = encodeURIComponent(`Portfolio · ${data.get("name") || "Hello"}`);
-              const body = encodeURIComponent(
-                `${data.get("message")}\n\n— ${data.get("name")} (${data.get("email")})`,
-              );
-              window.location.href = `mailto:mohammedshahid2408@gmail.com?subject=${subject}&body=${body}`;
-            }}
-            className="space-y-3 rounded-xl border border-border bg-card p-4 sm:p-5"
-          >
-            <div className="grid gap-3 sm:grid-cols-2">
-              <label className="block text-xs">
-                <span className="text-muted-foreground">Name</span>
-                <input
-                  required
-                  name="name"
-                  className="mt-1 w-full rounded-md border border-input bg-background px-2.5 py-1.5 text-sm outline-none focus:border-primary"
-                />
-              </label>
-              <label className="block text-xs">
-                <span className="text-muted-foreground">Email</span>
-                <input
-                  required
-                  type="email"
-                  name="email"
-                  className="mt-1 w-full rounded-md border border-input bg-background px-2.5 py-1.5 text-sm outline-none focus:border-primary"
-                />
-              </label>
-            </div>
-            <label className="block text-xs">
-              <span className="text-muted-foreground">Message</span>
+        <div className="w-full max-w-xl">
+          <div className="rounded-3xl border-2 border-primary/40 p-2 shadow-[0_8px_40px_-12px_hsl(var(--primary)/0.25)]">
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                const data = new FormData(e.currentTarget);
+                const subject = encodeURIComponent(
+                  String(data.get("subject") || `Portfolio · ${data.get("name") || "Hello"}`),
+                );
+                const body = encodeURIComponent(
+                  `${data.get("message")}\n\n— ${data.get("name")} (${data.get("email")})`,
+                );
+                window.location.href = `mailto:mohammedshahid2408@gmail.com?subject=${subject}&body=${body}`;
+              }}
+              className="rounded-2xl border border-primary/30 bg-card/60 p-6 sm:p-8 space-y-4"
+            >
+              <input
+                required
+                name="name"
+                placeholder="Name"
+                maxLength={100}
+                className="w-full rounded-full border-2 border-primary/30 bg-background px-5 py-3 text-sm outline-none transition-colors placeholder:text-muted-foreground hover:border-primary/50 focus:border-primary"
+              />
+              <input
+                required
+                type="email"
+                name="email"
+                placeholder="Email"
+                maxLength={255}
+                className="w-full rounded-full border-2 border-primary/30 bg-background px-5 py-3 text-sm outline-none transition-colors placeholder:text-muted-foreground hover:border-primary/50 focus:border-primary"
+              />
+              <input
+                name="subject"
+                placeholder="Subject"
+                maxLength={150}
+                className="w-full rounded-full border-2 border-primary/30 bg-background px-5 py-3 text-sm outline-none transition-colors placeholder:text-muted-foreground hover:border-primary/50 focus:border-primary"
+              />
               <textarea
                 required
                 name="message"
-                rows={4}
-                className="mt-1 w-full rounded-md border border-input bg-background px-2.5 py-1.5 text-sm outline-none focus:border-primary"
+                rows={5}
+                placeholder="Comment …"
+                maxLength={1000}
+                className="w-full resize-none rounded-2xl border-2 border-primary/30 bg-background px-5 py-3 text-sm outline-none transition-colors placeholder:text-muted-foreground hover:border-primary/50 focus:border-primary"
               />
-            </label>
-            <button
-              type="submit"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground"
-            >
-              Send message <ArrowRight className="h-4 w-4" />
-            </button>
-          </form>
+              <div className="flex justify-center pt-2">
+                <button
+                  type="submit"
+                  className="inline-flex items-center gap-2 rounded-full border-2 border-primary/40 bg-primary px-8 py-2.5 text-sm font-medium text-primary-foreground shadow-sm transition-all hover:shadow-md hover:-translate-y-0.5"
+                >
+                  Send <ArrowRight className="h-4 w-4" />
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </Section>
+
 
       {/* FOOTER */}
       <footer className="border-t border-border bg-card/40 px-6 py-12 md:px-12">
