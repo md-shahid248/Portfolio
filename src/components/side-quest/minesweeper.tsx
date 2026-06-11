@@ -109,7 +109,7 @@ export function Minesweeper({ onWin }: { onWin?: () => void }) {
         Left-click to reveal. Right-click (or long-press) to flag.
       </p>
       <p className="text-sm">{msg}</p>
-      <div className="grid gap-0.5 rounded-xl bg-border p-0.5" style={{ gridTemplateColumns: `repeat(${COLS}, minmax(0, 1fr))` }}>
+      <div className="grid w-full max-w-[22rem] gap-0.5 rounded-xl bg-border p-0.5" style={{ gridTemplateColumns: `repeat(${COLS}, minmax(0, 1fr))` }}>
         {board.map((row, r) =>
           row.map((cell, c) => (
             <button
