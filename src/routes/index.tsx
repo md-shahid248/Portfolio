@@ -11,9 +11,9 @@ import {
   Menu,
   X,
 } from "lucide-react";
-import portrait from "@/assets/portrait.jpg";
-import projectFind from "@/assets/project-finditcampus.jpg";
-import projectMarine from "@/assets/project-marine.jpg";
+const portrait = "https://i.postimg.cc/Y0Pv782R/Profile-photo.jpg";
+const projectFind = "https://i.postimg.cc/7PjzpYC4/Find-It-Campus-Lost-Found-Portal.png";
+const projectMarine = "https://i.postimg.cc/yNNWDwJg/Bluevision.jpg";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Typewriter } from "@/components/typewriter";
 import { SideQuest } from "@/components/side-quest/side-quest";
@@ -165,7 +165,7 @@ function Portfolio() {
       links: { github: "https://github.com/md-shahid248" },
     },
     {
-      title: "Marine Pollution Detection",
+      title: "BlueVision: Marine Plastic Detection",
       tag: "AI / Computer Vision",
       year: "2025",
       image: projectMarine,
@@ -460,7 +460,7 @@ function Portfolio() {
 
       {/* CONTACT */}
       <Section id="contact" eyebrow="Contact" title="Let's connect" side="Open to roles, collabs and conversations.">
-        <div className="grid gap-8">
+        <div className="mx-auto w-full max-w-xl">
           <form
             onSubmit={(e) => {
               e.preventDefault();
@@ -471,44 +471,43 @@ function Portfolio() {
               );
               window.location.href = `mailto:mohammedshahid2408@gmail.com?subject=${subject}&body=${body}`;
             }}
-            className="space-y-4 rounded-2xl border border-border bg-card p-6"
+            className="space-y-3 rounded-xl border border-border bg-card p-4 sm:p-5"
           >
-            <div className="grid gap-4 sm:grid-cols-2">
-              <label className="block text-sm">
+            <div className="grid gap-3 sm:grid-cols-2">
+              <label className="block text-xs">
                 <span className="text-muted-foreground">Name</span>
                 <input
                   required
                   name="name"
-                  className="mt-1 w-full rounded-md border border-input bg-background px-3 py-2 text-sm outline-none focus:border-primary"
+                  className="mt-1 w-full rounded-md border border-input bg-background px-2.5 py-1.5 text-sm outline-none focus:border-primary"
                 />
               </label>
-              <label className="block text-sm">
+              <label className="block text-xs">
                 <span className="text-muted-foreground">Email</span>
                 <input
                   required
                   type="email"
                   name="email"
-                  className="mt-1 w-full rounded-md border border-input bg-background px-3 py-2 text-sm outline-none focus:border-primary"
+                  className="mt-1 w-full rounded-md border border-input bg-background px-2.5 py-1.5 text-sm outline-none focus:border-primary"
                 />
               </label>
             </div>
-            <label className="block text-sm">
+            <label className="block text-xs">
               <span className="text-muted-foreground">Message</span>
               <textarea
                 required
                 name="message"
-                rows={5}
-                className="mt-1 w-full rounded-md border border-input bg-background px-3 py-2 text-sm outline-none focus:border-primary"
+                rows={4}
+                className="mt-1 w-full rounded-md border border-input bg-background px-2.5 py-1.5 text-sm outline-none focus:border-primary"
               />
             </label>
             <button
               type="submit"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground"
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground"
             >
               Send message <ArrowRight className="h-4 w-4" />
             </button>
           </form>
-
         </div>
       </Section>
 
