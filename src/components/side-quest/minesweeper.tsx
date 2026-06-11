@@ -1,9 +1,9 @@
 import { useMemo, useState } from "react";
 import { Flag, Bomb } from "lucide-react";
 
-const ROWS = 6;
-const COLS = 6;
-const MINES = 5;
+const ROWS = 10;
+const COLS = 10;
+const MINES = 10;
 
 type Cell = { mine: boolean; revealed: boolean; flagged: boolean; adj: number };
 
