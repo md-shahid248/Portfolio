@@ -104,7 +104,7 @@ export function Sudoku({ onWin }: { onWin?: () => void }) {
   };
 
   return (
-    <div className="flex flex-col items-center gap-4">
+    <div className="flex flex-col items-center gap-3">
       <div className="flex flex-col items-center gap-1">
         <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Very Easy</span>
         <p className="max-w-sm text-center text-sm text-muted-foreground">
@@ -135,7 +135,7 @@ export function Sudoku({ onWin }: { onWin?: () => void }) {
                   inputMode="numeric"
                   maxLength={1}
                   className={[
-                    "h-9 w-9 sm:h-10 sm:w-10 bg-transparent text-center text-lg font-semibold outline-none",
+                    "h-7 w-7 sm:h-8 sm:w-8 bg-transparent text-center text-sm sm:text-base font-semibold outline-none",
                     "focus:bg-primary/10 focus:ring-2 focus:ring-inset focus:ring-primary",
                     borderRight,
                     borderBottom,
