@@ -135,7 +135,7 @@ export function Sudoku({ onWin }: { onWin?: () => void }) {
                   inputMode="numeric"
                   maxLength={1}
                   className={[
-                    "h-11 w-11 sm:h-12 sm:w-12 bg-transparent text-center text-xl font-semibold outline-none",
+                    "h-9 w-9 sm:h-10 sm:w-10 bg-transparent text-center text-lg font-semibold outline-none",
                     "focus:bg-primary/10 focus:ring-2 focus:ring-inset focus:ring-primary",
                     borderRight,
                     borderBottom,

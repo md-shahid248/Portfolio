@@ -93,7 +93,7 @@ export function SideQuest() {
           aria-label={currentLabel}
         >
           <div
-            className="relative w-full max-w-lg rounded-2xl border border-border bg-card p-6 shadow-2xl animate-scale-in"
+            className="relative flex max-h-[90vh] w-full max-w-lg flex-col rounded-2xl border border-border bg-card p-6 shadow-2xl animate-scale-in overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="mb-4 flex items-start justify-between gap-4">
@@ -110,13 +110,15 @@ export function SideQuest() {
               </button>
             </div>
 
-            <Suspense fallback={<p className="py-12 text-center text-sm text-muted-foreground">Loading game…</p>}>
-              {active === "tic-tac-toe" && <TicTacToe onWin={handleWin} />}
-              {active === "sudoku" && <Sudoku onWin={handleWin} />}
-              {active === "minesweeper" && <Minesweeper onWin={handleWin} />}
-            </Suspense>
+            <div className="flex-1 overflow-y-auto min-h-0">
+              <Suspense fallback={<p className="py-12 text-center text-sm text-muted-foreground">Loading game…</p>}>
+                {active === "tic-tac-toe" && <TicTacToe onWin={handleWin} />}
+                {active === "sudoku" && <Sudoku onWin={handleWin} />}
+                {active === "minesweeper" && <Minesweeper onWin={handleWin} />}
+              </Suspense>
+            </div>
 
-            <div className="mt-6 flex flex-wrap items-center justify-center gap-2 border-t border-border pt-4">
+            <div className="mt-4 flex flex-wrap items-center justify-center gap-2 border-t border-border pt-4 shrink-0">
               <button
                 onClick={another}
                 className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:scale-[1.02] transition-transform"
