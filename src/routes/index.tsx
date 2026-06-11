@@ -97,7 +97,7 @@ function Section({
 }
 
 function Portfolio() {
-  const clock = useClock();
+  
   const [open, setOpen] = useState(false);
 
   const skills = useMemo(
