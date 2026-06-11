@@ -165,7 +165,7 @@ function Portfolio() {
       links: { github: "https://github.com/md-shahid248" },
     },
     {
-      title: "Marine Pollution Detection",
+      title: "BlueVision: Marine Plastic Detection",
       tag: "AI / Computer Vision",
       year: "2025",
       image: projectMarine,
