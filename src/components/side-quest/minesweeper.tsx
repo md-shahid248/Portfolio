@@ -104,12 +104,12 @@ export function Minesweeper({ onWin }: { onWin?: () => void }) {
   };
 
   return (
-    <div className="flex flex-col items-center gap-4">
-      <p className="text-sm text-muted-foreground">
+    <div className="flex flex-col items-center gap-3">
+      <p className="px-2 text-center text-sm text-muted-foreground">
         Left-click to reveal. Right-click (or long-press) to flag.
       </p>
       <p className="text-sm">{msg}</p>
-      <div className="grid w-full max-w-[22rem] gap-0.5 rounded-xl bg-border p-0.5" style={{ gridTemplateColumns: `repeat(${COLS}, minmax(0, 1fr))` }}>
+      <div className="grid w-full max-w-[18rem] sm:max-w-[20rem] gap-0.5 rounded-xl bg-border p-0.5" style={{ gridTemplateColumns: `repeat(${COLS}, minmax(0, 1fr))` }}>
         {board.map((row, r) =>
           row.map((cell, c) => (
             <button
@@ -136,12 +136,14 @@ export function Minesweeper({ onWin }: { onWin?: () => void }) {
           )),
         )}
       </div>
-      <button
-        onClick={restart}
-        className="rounded-full border border-border bg-background px-4 py-2 text-sm hover:bg-accent"
-      >
-        Restart
-      </button>
+      <div className="mt-1 flex justify-center">
+        <button
+          onClick={restart}
+          className="rounded-full border border-border bg-background px-4 py-2 text-sm hover:bg-accent"
+        >
+          Restart
+        </button>
+      </div>
     </div>
   );
 }

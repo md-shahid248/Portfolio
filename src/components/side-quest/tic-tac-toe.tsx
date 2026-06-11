@@ -79,7 +79,7 @@ export function TicTacToe({ onWin }: { onWin?: () => void }) {
     : turn === "X" ? "Your turn (X)" : "Computer thinking…";
 
   return (
-    <div className="flex flex-col items-center gap-4">
+    <div className="flex flex-col items-center gap-3">
       <p className="text-sm text-muted-foreground">{status}</p>
       <div className="grid grid-cols-3 gap-2">
         {board.map((c, i) => {
@@ -88,7 +88,7 @@ export function TicTacToe({ onWin }: { onWin?: () => void }) {
             <button
               key={i}
               onClick={() => click(i)}
-              className={`h-20 w-20 rounded-xl border border-border bg-card text-3xl font-semibold transition-colors hover:border-primary/40 ${
+              className={`h-14 w-14 sm:h-16 sm:w-16 rounded-xl border border-border bg-card text-2xl sm:text-3xl font-semibold transition-colors hover:border-primary/40 ${
                 isWin ? "border-primary bg-primary/10 text-primary" : ""
               }`}
               aria-label={`Cell ${i + 1}`}
@@ -98,12 +98,14 @@ export function TicTacToe({ onWin }: { onWin?: () => void }) {
           );
         })}
       </div>
-      <button
-        onClick={restart}
-        className="rounded-full border border-border bg-background px-4 py-2 text-sm hover:bg-accent"
-      >
-        Restart
-      </button>
+      <div className="mt-1 flex justify-center">
+        <button
+          onClick={restart}
+          className="rounded-full border border-border bg-background px-4 py-2 text-sm hover:bg-accent"
+        >
+          Restart
+        </button>
+      </div>
     </div>
   );
 }
