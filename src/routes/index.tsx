@@ -11,9 +11,9 @@ import {
   Menu,
   X,
 } from "lucide-react";
-import portrait from "@/assets/portrait.jpg";
-import projectFind from "@/assets/project-finditcampus.jpg";
-import projectMarine from "@/assets/project-marine.jpg";
+const portrait = "https://i.postimg.cc/Y0Pv782R/Profile-photo.jpg";
+const projectFind = "https://i.postimg.cc/7PjzpYC4/Find-It-Campus-Lost-Found-Portal.png";
+const projectMarine = "https://i.postimg.cc/yNNWDwJg/Bluevision.jpg";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Typewriter } from "@/components/typewriter";
 import { SideQuest } from "@/components/side-quest/side-quest";
