@@ -77,14 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Mohammed Shahid R" },
+      { name: "description", content: "Mohammed Shahid R — Final-year Information Science student building AI, cloud, and full-stack solutions. Explore projects,certifications, research, and skills." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Mohammed Shahid R" },
+      { property: "og:description", content: "Mohammed Shahid R — Final-year Information Science student building AI, cloud, and full-stack solutions. Explore projects,certifications, research, and skills." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Mohammed Shahid R" },
+      { name: "twitter:description", content: "Mohammed Shahid R — Final-year Information Science student building AI, cloud, and full-stack solutions. Explore projects,certifications, research, and skills." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/9525204b-1a95-468b-ba19-1bf2ccf9faa3" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/9525204b-1a95-468b-ba19-1bf2ccf9faa3" },
     ],
     links: [
       {
