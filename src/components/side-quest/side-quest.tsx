@@ -93,7 +93,7 @@ export function SideQuest() {
           aria-label={currentLabel}
         >
           <div
-            className="relative flex max-h-[90vh] w-full max-w-lg flex-col rounded-2xl border border-border bg-card p-6 shadow-2xl animate-scale-in overflow-hidden"
+            className="relative flex max-h-[92vh] w-full max-w-lg flex-col rounded-2xl border border-border bg-card p-5 sm:p-6 shadow-2xl animate-scale-in overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="mb-4 flex items-start justify-between gap-4">
@@ -110,7 +110,7 @@ export function SideQuest() {
               </button>
             </div>
 
-            <div className="min-h-0">
+            <div className="min-h-0 flex-1 overflow-y-auto pb-2">
               <Suspense fallback={<p className="py-12 text-center text-sm text-muted-foreground">Loading game…</p>}>
                 {active === "tic-tac-toe" && <TicTacToe onWin={handleWin} />}
                 {active === "sudoku" && <Sudoku onWin={handleWin} />}
@@ -118,7 +118,7 @@ export function SideQuest() {
               </Suspense>
             </div>
 
-            <div className="mt-4 flex flex-wrap items-center justify-center gap-2 border-t border-border pt-4 shrink-0">
+            <div className="mt-3 flex flex-wrap items-center justify-center gap-2 border-t border-border pt-4 shrink-0">
               <button
                 onClick={another}
                 className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:scale-[1.02] transition-transform"
