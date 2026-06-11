@@ -110,7 +110,7 @@ export function SideQuest() {
               </button>
             </div>
 
-            <div className="flex-1 overflow-y-auto min-h-0">
+            <div className="min-h-0">
               <Suspense fallback={<p className="py-12 text-center text-sm text-muted-foreground">Loading game…</p>}>
                 {active === "tic-tac-toe" && <TicTacToe onWin={handleWin} />}
                 {active === "sudoku" && <Sudoku onWin={handleWin} />}
