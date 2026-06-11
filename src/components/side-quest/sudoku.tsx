@@ -40,13 +40,7 @@ function generateSolution(): number[][] {
   const brOrder = shuffle([0, 1, 2]);
   grid = brOrder.flatMap((br) => [grid[br * 2], grid[br * 2 + 1]]);
 
-  // Swap cols within each box-col (boxes are 3 cols wide)
-  for (let bc = 0; bc < 2; bc++) {
-    const order = shuffle([0, 1, 2]).map((i) => bc * 3 + i);
-    grid = grid.map((row) => order.map((c) => row[c]).concat(row.slice((1 - bc) * 3, (1 - bc) * 3 + 3).filter(() => false)));
-    // simpler: rebuild row
-  }
-  // The above col-swap got messy — redo cleanly:
+  // Permute columns within each box-col, and optionally swap box-cols
   return permuteCols(grid);
 }
 
