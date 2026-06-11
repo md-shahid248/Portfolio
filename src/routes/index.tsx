@@ -420,12 +420,12 @@ function Portfolio() {
               rel="noreferrer"
               className="group block"
             >
-              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-card">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-muted/30 flex items-center justify-center p-3">
                 <img
                   src={p.image}
                   alt={p.title}
                   loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                  className="max-h-full max-w-full object-contain transition-transform duration-700 group-hover:scale-[1.04]"
                 />
               </div>
               <div className="mt-4 flex items-start justify-between gap-4">
