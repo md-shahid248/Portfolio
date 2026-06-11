@@ -1,9 +1,9 @@
 import { useMemo, useState } from "react";
 import { Flag, Bomb } from "lucide-react";
 
-const ROWS = 6;
-const COLS = 6;
-const MINES = 5;
+const ROWS = 10;
+const COLS = 10;
+const MINES = 10;
 
 type Cell = { mine: boolean; revealed: boolean; flagged: boolean; adj: number };
 
@@ -109,14 +109,14 @@ export function Minesweeper({ onWin }: { onWin?: () => void }) {
         Left-click to reveal. Right-click (or long-press) to flag.
       </p>
       <p className="text-sm">{msg}</p>
-      <div className="grid gap-0.5 rounded-xl bg-border p-0.5" style={{ gridTemplateColumns: `repeat(${COLS}, minmax(0, 1fr))` }}>
+      <div className="grid w-full max-w-[22rem] gap-0.5 rounded-xl bg-border p-0.5" style={{ gridTemplateColumns: `repeat(${COLS}, minmax(0, 1fr))` }}>
         {board.map((row, r) =>
           row.map((cell, c) => (
             <button
               key={`${r}-${c}`}
               onClick={() => reveal(r, c)}
               onContextMenu={(e) => flag(e, r, c)}
-              className={`flex h-10 w-10 items-center justify-center rounded-md text-sm font-bold transition-colors ${
+              className={`flex aspect-square w-full min-w-0 items-center justify-center rounded-md text-xs font-bold transition-colors sm:text-sm ${
                 cell.revealed
                   ? cell.mine
                     ? "bg-red-500/20 text-red-500"

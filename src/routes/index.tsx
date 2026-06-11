@@ -274,13 +274,13 @@ function Portfolio() {
           </div>
 
           <div className="reveal">
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-border bg-card">
+            <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-2xl border border-border bg-card">
               <img
                 src={portrait}
                 alt="Mohammed Shahid R"
                 width={1024}
-                height={1024}
-                className="absolute inset-0 h-full w-full object-contain"
+                height={1280}
+                className="absolute inset-0 h-full w-full object-contain object-center"
               />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background/80 to-transparent p-5">
                 <div className="flex items-center justify-between text-xs text-foreground/90">
@@ -502,7 +502,7 @@ function Portfolio() {
               <div className="flex justify-center pt-2">
                 <button
                   type="submit"
-                  className="inline-flex items-center gap-2 rounded-full border-2 border-primary/40 bg-background px-8 py-2.5 text-sm font-medium text-foreground shadow-sm transition-all hover:border-primary hover:bg-primary hover:text-primary-foreground"
+                  className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-2.5 text-sm font-medium text-primary-foreground shadow-lg shadow-primary/20 transition-transform hover:scale-[1.03] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                 >
                   Send <ArrowRight className="h-4 w-4" />
                 </button>
