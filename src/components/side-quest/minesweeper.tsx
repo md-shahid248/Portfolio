@@ -116,7 +116,7 @@ export function Minesweeper({ onWin }: { onWin?: () => void }) {
               key={`${r}-${c}`}
               onClick={() => reveal(r, c)}
               onContextMenu={(e) => flag(e, r, c)}
-              className={`flex h-10 w-10 items-center justify-center rounded-md text-sm font-bold transition-colors ${
+              className={`flex aspect-square w-full min-w-0 items-center justify-center rounded-md text-xs font-bold transition-colors sm:text-sm ${
                 cell.revealed
                   ? cell.mine
                     ? "bg-red-500/20 text-red-500"
