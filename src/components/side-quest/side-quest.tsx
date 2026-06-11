@@ -77,7 +77,7 @@ export function SideQuest() {
           onClick={start}
           className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-base font-medium text-primary-foreground shadow-lg shadow-primary/20 transition-transform hover:scale-[1.03]"
         >
-          <Gamepad2 className="h-5 w-5" /> 🎮 Click Me
+          <Gamepad2 className="h-5 w-5" /> Click Me
         </button>
         <p className="mt-6 text-xs uppercase tracking-[0.18em] text-muted-foreground">
           Visitors have completed <span className="text-foreground tabular-nums">{count}</span> Side Quest{count === 1 ? "" : "s"}
